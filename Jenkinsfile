@@ -11,7 +11,7 @@ pipeline {
             }
         }
         stage('build2') {
-            agent { docker { image 'python:3.5.1' } }
+            agent { docker { image 'python:3.5.1' reuseNode} }
             steps {
                 sh 'python --version'
             }
