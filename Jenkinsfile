@@ -1,8 +1,9 @@
 pipeline {
-    node {
-        label 'slave-centos'        
+    agent {
+        node {
+            label 'slave-centos'        
+        }
     }
-    
     stages {
         stage('build1') {
             steps {
